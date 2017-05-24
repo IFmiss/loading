@@ -13,7 +13,7 @@
 				type: 			        'origin', 			  									//pic   origin  
 				discription: 			'这是一个描述', 										//loading的描述
 				titleColor: 			'rgba(255,255,255,0.7)',								//title文本颜色
-				discColor: 			'rgba(255,255,255,0.7)',								//disc文本颜色
+				discColor: 				'rgba(255,255,255,0.7)',								//disc文本颜色
 				loadingWidth:           260,                									//中间的背景宽度width
 				loadingBg:        		'rgba(0, 0, 0, 0.6);',  								//中间的背景色
 				borderRadius:     		12,                 									//中间的背景色的borderRadius
@@ -34,6 +34,8 @@
 				imgDivWidth: 			80,           											//imgDiv的width
 				imgDivHeight: 			80,           											//imgDiv的Height
 
+				flexCenter: 	 		false, 													//是否用flex布局让loading-div垂直水平居中
+				flexDirection: 			'row',													//row column  flex的方向   横向 和 纵向				
 				mustRelative: 			false, 													//$this是否规定relative
 		    };
 
@@ -73,6 +75,19 @@
 			        '-moz-border-radius':opt.borderRadius,
 			        'border-radius':opt.borderRadius,
 		      	}).appendTo(_this.cpt_loading_mask);
+
+				if(opt.flexCenter){
+					_this.div_loading.css({
+						"display": "-webkit-flex",
+						"display": "flex",
+						"-webkit-flex-direction":opt.flexDirection,
+						"flex-direction":opt.flexDirection,
+						"-webkit-align-items": "center",
+						"align-items": "center",
+						"-webkit-justify-content": "center",
+						"justify-content":"center",
+					});
+				}
 
 				//loading标题
 	        	_this.loading_title = $('<p class="loading-title txt-textOneRow"></p>').css({
