@@ -144,10 +144,17 @@
 
 	//关闭Loading
 	removeLoading = function(loadingName){
+		var loadingName = loadingName || '';
 		$('body,html').css({
     		overflow:'auto',
     	});
-		var name = loadingName || 'loadingName';
-		$(".cpt-loading-mask[data-name="+name+"]").remove();
+
+		if(loadingName == ''){
+			$(".cpt-loading-mask").remove();
+		}else{
+			var name = loadingName || 'loadingName';
+			$(".cpt-loading-mask[data-name="+name+"]").remove();		
+		}
+
 	}
 })(jQuery)
