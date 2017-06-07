@@ -143,7 +143,7 @@
 	}
 
 	//关闭Loading
-	removeLoading = function(loadingName){
+	var removeLoading = function(loadingName){
 		var loadingName = loadingName || '';
 		$('body,html').css({
     		overflow:'auto',
