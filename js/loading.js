@@ -15,12 +15,12 @@
 				titleColor: 			'rgba(255,255,255,0.7)',								//title文本颜色
 				discColor: 				'rgba(255,255,255,0.7)',								//disc文本颜色
 				loadingWidth:           260,                									//中间的背景宽度width
-				loadingBg:        		'rgba(0, 0, 0, 0.6);',  								//中间的背景色
+				loadingBg:        		'rgba(0, 0, 0, 0.6)',  									//中间的背景色
 				borderRadius:     		12,                 									//中间的背景色的borderRadius
 				loadingMaskBg:    		'transparent',          								//背景遮罩层颜色
 				zIndex:           		1000001,              									//层级
 
-				// 这是圆形旋转的loading样式    （originLoading）
+				// 这是圆形旋转的loading样式  
 				originDivWidth:        	60,           											//loadingDiv的width
 				originDivHeight:       	60,           											//loadingDiv的Height
 
