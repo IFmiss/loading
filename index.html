@@ -5,20 +5,23 @@
 	<title>loading测试效果</title>
 	<link rel="shortcut icon" href="http://www.daiwei.org/index/images/logo/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
-	<link rel="stylesheet" href="http://www.daiwei.org/global/css/animate.css">
+	<!-- <link rel="stylesheet" href="http://www.daiwei.org/global/css/animate.css"> -->
 	<link rel="stylesheet" href="http://www.daiwei.org/global/css/global.css">
 	<link rel="stylesheet" href="css/loading.css">
 
 </head>
 <style>
 	body,html{
-		min-height: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.div-btn{
 		width: 100%;
 		max-width: 560px;
-		margin:200px auto; 
+		/*margin:200px auto; */
 	}
 
 	.div-btn div{
@@ -36,19 +39,16 @@
 
 <body>
 	<div class="div-btn">
-		<div class="dw-btn btn-success" onclick="loading1()">纵向loading效果</div>
-		<div class="dw-btn btn-warning" onclick="loading8()">纵向loading文字颜色</div>
-		<div class="dw-btn btn-primary" onclick="loading2()">纵向loading效果无title</div>
-		<div class="dw-btn btn-danger" onclick="loading3()">纵向loading效果无title描述</div>
+		<div class="dw-btn btn-success" onclick="loading1()">默认效果</div>
+		<div class="dw-btn btn-warning" onclick="loading8()">纵向文字颜色</div>
+		<div class="dw-btn btn-primary" onclick="loading2()">纵向效果无title</div>
+		<div class="dw-btn btn-danger" onclick="loading3()">纵向效果无title描述</div>
 		<div class="dw-btn btn-warning " onclick="loading4()">其他背景色</div>
 		<div class="dw-btn btn-success" onclick="loading5()">纵向图片效果</div>
-		<div class="dw-btn btn-primary" onclick="loading6()">横向loading图片效果</div>
-		<div class="dw-btn btn-danger" onclick="loading7()">横向loading进度效果,字体颜色</div>
-		<div class="dw-btn btn-success" onclick="loading9()">元素中显示loading</div>
+		<div class="dw-btn btn-primary" onclick="loading6()">横向图片效果</div>
+		<div class="dw-btn btn-danger" onclick="loading7()">横向进度效果,字体颜色</div>
 		<div class="dw-btn btn-warning" onclick="loading10()">无过渡效果</div>
 	</div>
-
-	<div class="test-div"></div>
 </body>
 <script src="http://www.daiwei.org/global/js/jquery.js"></script>
 <script src="js/loading.js"></script>
@@ -99,7 +99,7 @@
 
 	function loading3() {
 		$('body').loading({
-			loadingWidth:240,
+			loadingWidth:120,
 			title:'',
 			name:'test',
 			discription:'',
@@ -179,7 +179,7 @@
 			originWidth:6,
 			originHeight:6,
 			smallLoading:false,
-			loadingBg:'#389A81',
+			loadingBg:'rgba(20,125,148,0.8)',
 			loadingMaskBg:'rgba(123,122,222,0.2)'
 		});
 
@@ -214,45 +214,22 @@
 
 	function loading8(){
 		$('body').loading({
-			loadingWidth:240,
-			title:'请稍等!',
+			loadingWidth:220,
+			title:'提示',
 			name:'test',
-			titleColor:'#4FBA85',
-			discColor:'#7BDBEF',
-			discription:'颜色自己搭配,我不太懂',
+			titleColor:'#fff',
+			discColor:'#EDEEE9',
+			discription:'颜色搭配,我不太懂',
 			direction:'column',
 			type:'origin',
-			// originBg:'#71EA71',
+			originBg:'#ECCFBB',
 			originDivWidth:40,
 			originDivHeight:40,
 			originWidth:6,
 			originHeight:6,
 			smallLoading:false,
-			loadingMaskBg:'rgba(0,0,0,0.2)'
-		});
-
-		setTimeout(function(){
-			removeLoading('test');
-		},3000);
-	}
-
-	function loading9(){
-		$('.test-div').loading({
-			loadingWidth:240,
-			title:'请稍等!',
-			name:'test',
-			discription:'这是一个描述...',
-			direction:'row',
-			type:'origin',
-			originBg:'#71EA71',
-			originDivWidth:30,
-			originDivHeight:30,
-			originWidth:4,
-			originHeight:4,
-			smallLoading:false,
-			titleColor:'#388E7A',
-			loadingBg:'#312923',
-			loadingMaskBg:'rgba(22,22,22,0.2)'
+			loadingBg:'rgba(56,43,14,0.8)',
+			loadingMaskBg:'rgba(66,66,66,0.2)'
 		});
 
 		setTimeout(function(){
@@ -265,7 +242,7 @@
 			loadingWidth:240,
 			title:'请稍等!',
 			name:'test',
-			animateStyle:'none',
+			animateIn:'none',
 			discription:'这是一个描述...',
 			direction:'row',
 			type:'origin',

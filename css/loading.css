@@ -190,6 +190,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100%;
   text-align: center;
   color: #fff;
+  padding: 2px 0;
   font-size: 16px;
   margin-bottom: 20px;
   white-space: nowrap;
@@ -198,7 +199,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-/* line 111, ../sass/loading.scss */
+/* line 112, ../sass/loading.scss */
 .cpt-loading-mask.column .div-loading .loading-discription {
   width: 100%;
   text-align: center;
@@ -206,7 +207,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 12px;
   margin-top: 20px;
 }
-/* line 122, ../sass/loading.scss */
+/* line 123, ../sass/loading.scss */
 .cpt-loading-mask.row {
   width: 100%;
   height: 100%;
@@ -225,7 +226,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-user-select: none;
   user-select: none;
 }
-/* line 135, ../sass/loading.scss */
+/* line 136, ../sass/loading.scss */
 .cpt-loading-mask.row .div-loading {
   position: absolute;
   top: 50%;
@@ -252,7 +253,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-radius: 12px;
   padding: 15px;
 }
-/* line 150, ../sass/loading.scss */
+/* line 151, ../sass/loading.scss */
 .cpt-loading-mask.row .div-loading .loading {
   position: relative;
   width: 60px;
@@ -260,7 +261,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background: transparent;
   float: left;
 }
-/* line 159, ../sass/loading.scss */
+/* line 160, ../sass/loading.scss */
 .cpt-loading-mask.row .div-loading .loading.origin div {
   width: 80%;
   height: 80%;
@@ -273,7 +274,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-animation: load 2.28s linear infinite;
   animation: load 2.28s linear infinite;
 }
-/* line 168, ../sass/loading.scss */
+/* line 169, ../sass/loading.scss */
 .cpt-loading-mask.row .div-loading .loading.origin div span {
   display: inline-block;
   width: 8px;
@@ -285,47 +286,47 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-top: -10px;
   margin-left: -10px;
 }
-/* line 181, ../sass/loading.scss */
+/* line 182, ../sass/loading.scss */
 .cpt-loading-mask.row .div-loading .loading.origin div:nth-child(1) {
   -moz-animation-delay: 0.2s;
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
-/* line 184, ../sass/loading.scss */
+/* line 185, ../sass/loading.scss */
 .cpt-loading-mask.row .div-loading .loading.origin div:nth-child(2) {
   -moz-animation-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
-/* line 187, ../sass/loading.scss */
+/* line 188, ../sass/loading.scss */
 .cpt-loading-mask.row .div-loading .loading.origin div:nth-child(3) {
   -moz-animation-delay: 0.6s;
   -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
-/* line 190, ../sass/loading.scss */
+/* line 191, ../sass/loading.scss */
 .cpt-loading-mask.row .div-loading .loading.origin div:nth-child(4) {
   -moz-animation-delay: 0.8s;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
-/* line 193, ../sass/loading.scss */
+/* line 194, ../sass/loading.scss */
 .cpt-loading-mask.row .div-loading .loading.origin div:nth-child(5) {
   -moz-animation-delay: 1s;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
-/* line 199, ../sass/loading.scss */
+/* line 200, ../sass/loading.scss */
 .cpt-loading-mask.row .div-loading .loading.pic {
   width: 80px;
   height: 80px;
 }
-/* line 203, ../sass/loading.scss */
+/* line 204, ../sass/loading.scss */
 .cpt-loading-mask.row .div-loading .loading.pic img {
   width: 100%;
   height: 100%;
 }
-/* line 210, ../sass/loading.scss */
+/* line 211, ../sass/loading.scss */
 .cpt-loading-mask.row .div-loading .loading-title {
   width: 72%;
   text-align: center;
@@ -340,7 +341,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-/* line 222, ../sass/loading.scss */
+/* line 223, ../sass/loading.scss */
 .cpt-loading-mask.row .div-loading .loading-discription {
   display: none;
   width: 100%;
@@ -348,6 +349,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #fff;
   font-size: 12px;
   margin-top: 20px;
+}
+
+/* line 236, ../sass/loading.scss */
+.animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+/* line 241, ../sass/loading.scss */
+.animated.infinite {
+  animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes fadeInNoTransform {
@@ -366,7 +378,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     opacity: 1;
   }
 }
-/* line 247, ../sass/loading.scss */
+/* line 256, ../sass/loading.scss */
 .fadeInNoTransform {
   -webkit-animation-name: fadeInNoTransform;
   animation-name: fadeInNoTransform;
@@ -388,7 +400,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     opacity: 0;
   }
 }
-/* line 260, ../sass/loading.scss */
+/* line 269, ../sass/loading.scss */
 .fadeOutNoTransform {
   -webkit-animation-name: fadeOutNoTransform;
   animation-name: fadeOutNoTransform;

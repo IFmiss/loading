@@ -7,7 +7,7 @@
 		    var loadingPosition ='';
 		    var defaultProp = {
 		    	direction: 				'column',												//方向，column纵向   row 横向
-				animateStyle: 	 		'fadeInNoTransform',    								//进入类型
+				animateIn: 	 			'fadeInNoTransform',    								//进入类型
 				title:                  '请稍等...',      										//显示什么内容
 				name: 					'loadingName', 											//loading的data-name的属性值  用于删除loading需要的参数
 				type: 			        'origin', 			  									//pic   origin  
@@ -41,6 +41,8 @@
 
 
 		    var opt = $.extend(defaultProp,options || {});
+
+		    //根据用户是针对body还是元素  设置对应的定位方式
 		    if($this.selector == 'body'){
 		    	$('body,html').css({
 		    		overflow:'hidden',
@@ -55,12 +57,12 @@
 		    	loadingPosition = 'absolute';
 		    }
 
-		    var _showOriginLoading = function(){
+		    defaultProp._showOriginLoading = function(){
 		    	var smallLoadingMargin = opt.smallLoading ? 0 : '-10px';
 		    	if(opt.direction == 'row'){smallLoadingMargin='-6px'}
 
 		    	//悬浮层
-		      	_this.cpt_loading_mask = $('<div class="cpt-loading-mask animated '+opt.animateStyle+' '+opt.direction+'" data-name="'+opt.name+'"></div>').css({
+		      	_this.cpt_loading_mask = $('<div class="cpt-loading-mask animated '+opt.animateIn+' '+opt.direction+'" data-name="'+opt.name+'"></div>').css({
 			        'background':opt.loadingMaskBg,
 			        'z-index':opt.zIndex,
 			        'position':loadingPosition,
@@ -127,18 +129,16 @@
 					e.preventDefault();
 			    });
 		    };
-
-		    function createLoading(){
+		    defaultProp._createLoading = function(){
 		    	//不能生成两个loading data-name 一样的loading
 		    	if($(".cpt-loading-mask[data-name="+opt.name+"]").length > 0){
 		    		// console.error('loading mask cant has same date-name('+opt.name+'), you cant set "date-name" prop when you create it');
 		    		return
 		    	}
 				
-				_showOriginLoading();
+				defaultProp._showOriginLoading();
 		    };
-
-		    createLoading();
+		    defaultProp._createLoading();
 		});
 	}
 

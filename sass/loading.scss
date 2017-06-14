@@ -102,6 +102,7 @@
 				width: 100%;
 				text-align: center;
 				color: #fff;
+				padding: 2px 0;
 				font-size: 16px;
 				// margin: 15px 0;
 				margin-bottom: 20px;
@@ -232,6 +233,14 @@
 	}
 }
 
+.animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
 
 //***************************************fadeInNoTransform
 @-webkit-keyframes fadeInNoTransform{
