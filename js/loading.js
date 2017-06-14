@@ -142,19 +142,19 @@
 		});
 	}
 
-	//关闭Loading
-	var removeLoading = function(loadingName){
-		var loadingName = loadingName || '';
-		$('body,html').css({
-    		overflow:'auto',
-    	});
-
-		if(loadingName == ''){
-			$(".cpt-loading-mask").remove();
-		}else{
-			var name = loadingName || 'loadingName';
-			$(".cpt-loading-mask[data-name="+name+"]").remove();		
-		}
-
-	}
 })(jQuery)
+
+//关闭Loading
+function removeLoading(loadingName){
+	var loadingName = loadingName || '';
+	$('body,html').css({
+		overflow:'auto',
+	});
+
+	if(loadingName == ''){
+		$(".cpt-loading-mask").remove();
+	}else{
+		var name = loadingName || 'loadingName';
+		$(".cpt-loading-mask[data-name="+name+"]").remove();		
+	}
+}
