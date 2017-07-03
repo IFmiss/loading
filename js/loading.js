@@ -1,3 +1,5 @@
+//未曾遗忘的青春
+//github  https://github.com/IFmiss/loading
 //显示Loading
 (function($){
 	$.fn.loading = function(options){
