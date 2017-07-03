@@ -1,4 +1,4 @@
-![](https://github.com/IFmiss/loading/blob/master/images/MA4poJbQzw.gif)
+![](https://github.com/IFmiss/loading/blob/master/images/MA4poJbQzw1.gif)
 
 ![](https://img.shields.io/badge/IE-10%2B-orange.svg)
 
